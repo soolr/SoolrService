@@ -1,0 +1,14 @@
+package ${entity.daoPackage};
+
+import com.soolr.api.base.ApiBaseDao;
+import com.soolr.api.entity.${entity.className};
+
+import java.util.List;
+
+/**
+ * ${entity.description}数据处理层
+ * @author ${entity.author}
+ */
+public interface ${entity.className}Dao extends ApiBaseDao<${entity.className},${entity.primaryKeyType}> {
+
+}

@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ding-portal-service
+  namespace: develop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: ding-portal-service
+  template:
+    metadata:
+      labels:
+        name: ding-portal-service
+        app: ding-portal-service
+    spec:
+      containers:
+      - image: registry.cn-beijing.aliyuncs.com/huazhu_alpha/ding-portal-service:${TAG}
+        imagePullPolicy: Always
+        name: ding-portal-service
+        ports:
+        - containerPort: 8080
